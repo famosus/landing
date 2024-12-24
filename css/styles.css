@@ -99,7 +99,7 @@ main.dark-mode #top > div > div > nav > a.customSecondaryTextTheme:hover{
   color: var(--colorTheme);
 } */
 
-#spinner:not([hidden]) {
+#spinner:hidden {
 	top: 0;
 	left: 0;
 	right: 0;
