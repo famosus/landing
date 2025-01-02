@@ -503,5 +503,14 @@ main > .intro {
 	display: none;
 }
 
+.hidden-form {
+        display: none;
+        margin-top: 20px;
+    }
 
+    .visible-form {
+        display: block;
+        margin-top: 20px;
+        padding-top: 20px; /* Added padding here */
+    }
 
