@@ -515,5 +515,26 @@ main > .intro {
     }
 
 
+/* Default (light mode) styles */
+:root {
+    --colorSecundario: #f2f2f2; /* Light background */
+    --gray-800: #2d3748; /* Dark background */
+}
 
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--colorSecundario); /* Default light mode background */
+}
+
+/* Header styles */
+header#top {
+    background-color: var(--colorSecundario);
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark header#top {
+    background-color: var(--gray-800);
+}
 
