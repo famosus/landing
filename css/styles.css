@@ -519,3 +519,15 @@ body, html, .root-container, .main-container {
     margin: 0;
     padding: 0;
 }
+
+/* Header background for light mode */
+header#top {
+    background-color: var(--colorSecundario); /* Light mode background */
+    transition: background-color 0.3s ease; /* Smooth transition between themes */
+}
+
+/* Header background for dark mode */
+header#top.dark {
+    background-color: var(--gray-800); /* Dark mode background */
+}
+
