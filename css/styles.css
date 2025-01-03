@@ -514,3 +514,17 @@ main > .intro {
         padding-top: 20px; /* Added padding here */
     }
 
+
+
+
+.bg-white {
+    background-color: var(--colorSecundario);
+}
+
+.dark .bg-white {
+    background-color: var(--gray-800);
+}
+
+section {
+    border: none;
+}
