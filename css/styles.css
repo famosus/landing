@@ -513,3 +513,9 @@ main > .intro {
         margin-top: 20px;
         padding-top: 20px; /* Added padding here */
     }
+
+body, html, .root-container, .main-container {
+    background-color: var(--backgroundColor);
+    margin: 0;
+    padding: 0;
+}
