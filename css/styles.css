@@ -514,6 +514,3 @@ main > .intro {
         padding-top: 20px; /* Added padding here */
     }
 
-.dark-mode .bg-white {
-    background-color: #1f2937; /* Dark gray */
-}
