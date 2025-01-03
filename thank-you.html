@@ -88,7 +88,7 @@ var formData = (function() {
 </head>
 <body>
     <div>
-        <h1>Thank You!</h1>
+        <h1>Thank You, <script>formData.display("name");</script>!</h1>
         <div class="personalized-message">
             Thank you, <script type="text/javascript">document.write(formData.display("name"));</script>!
         </div>
