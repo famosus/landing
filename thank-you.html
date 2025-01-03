@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <script type="text/javascript">
- var formData = function() {  var query_string = (location.search) ? ((location.search.indexOf('#') != -1) ? location.search.substring(1, location.search.indexOf('#')) : location.search.substring(1)) : '';  
-var elements = [];  
-if(query_string) {     
-    var pairs = query_string.split("&");     
-    for(i in pairs) {     
-        if (typeof pairs[i] == 'string') {           
-            var tmp = pairs[i].split("=");           
-            var queryKey = unescape(tmp[0]);           
-            queryKey = (queryKey.charAt(0) == 'c') ? queryKey.replace(/\s/g, "_") : queryKey;   
-            elements[queryKey] = unescape(tmp[1]);      
-             }    
-       } 
- }  
-return {     
-    display: function(key) {         
-        if(elements[key]) {           
-             document.write(elements[key]);         
-         } 
-         else {         
-               document.write("<!--If desired, replace everything between these quotes with a default in case there is no data in the query string.-->");          
-          }     
-  }   
-} 
-}
-(); </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
@@ -48,6 +20,13 @@ return {
             font-size: 3rem;
             margin-bottom: 20px;
             text-shadow: 0 0 10px #ffff00; /* Yellow border effect */
+        }
+        .personalized-message {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffff00; /* Yellow text for the name */
+            text-shadow: 0 0 10px #ffffff; /* White glow effect */
+            margin-bottom: 30px;
         }
         p {
             font-size: 1.5rem;
@@ -73,9 +52,11 @@ return {
 <body>
     <div>
         <h1>Thank You!</h1>
+        <div class="personalized-message">
+            Thank you, <script type="text/javascript">document.write(formData.display("name"));</script>!
+        </div>
         <p>Your subscription has been successfully confirmed. We're thrilled to have you with us!</p>
-        <a href="https://www.venzyslav.com">Back to Home</a>
-        <script type="text/javascript">formData.display("name")</script>
+        <a href="index.html">Back to Home</a>
     </div>
 </body>
 </html>
