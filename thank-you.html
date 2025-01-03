@@ -4,37 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing styles -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Dark blue background */
+            color: #ffffff; /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ffff00; /* Yellow border effect */
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #007bff; /* Bright blue button */
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05); /* Slightly enlarges button on hover */
+        }
+    </style>
 </head>
 <body>
-    <div class="mx-auto bg-white dark:bg-gray-900">
-        <header id="top" class="text-center dark:bg-gray-900" role="banner">
-            <div class="flex flex-wrap justify-center max-w-md px-4 pt-8 pb-0 mx-auto text-lg font-bold text-gray-800 uppercase md:pt-12 md:px-8 lg:pt-12 sm:max-w-xl md:max-w-6xl md:text-xl font-header dark:text-white md:justify-end">
-                <div class="flex flex-col items-center justify-center sm:flex-row">
-                    <nav class="mb-1 sm:mb-0">
-                        <a href="index.html" class="menu-item-scroll cursor-pointer hover:text-primary dark:hover:text-secondary">Home</a>
-                        <a href="#portfolio" class="menu-item-scroll mx-6 cursor-pointer md:mx-8 hover:text-primary dark:hover:text-secondary">Projects</a>
-                        <a href="#about" class="menu-item-scroll cursor-pointer hover:text-primary dark:hover:text-secondary">About</a>
-                        <a href="#contact" class="menu-item-scroll mx-6 cursor-pointer md:mx-8 hover:text-primary dark:hover:text-secondary">Contact</a>
-                        <a target="_blank" rel="noopener" href="https://notionarray.com/blog" class="cursor-pointer hover:text-primary dark:hover:text-secondary">Blog</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-        <main class="dark-mode text-center py-20">
-            <h1 class="text-4xl font-bold text-gray-800 dark:text-white">Thank You!</h1>
-            <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
-                Your subscription has been successfully confirmed. We're excited to have you on board!
-            </p>
-            <a href="index.html" class="mt-6 inline-block bg-primary text-white font-bold py-2 px-4 rounded hover:bg-secondary">
-                Back to Home
-            </a>
-        </main>
-
-        <footer class="text-center py-4 dark:bg-gray-900 dark:text-white">
-            <p>&copy; 2025 Your Website. All Rights Reserved.</p>
-        </footer>
+    <div>
+        <h1>Thank You!</h1>
+        <p>Your subscription has been successfully confirmed. We're thrilled to have you with us!</p>
+        <a href="https://www.venzyslav.com">Back to Home</a>
     </div>
 </body>
 </html>
