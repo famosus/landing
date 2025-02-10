@@ -16,15 +16,26 @@
             height: 100vh;
             text-align: center;
         }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
         h1 {
             font-size: 3rem;
             margin-bottom: 20px;
             text-shadow: 0 0 10px #ffff00; /* Yellow border effect */
         }
+
         p {
             font-size: 1.5rem;
             margin-bottom: 30px;
         }
+
         a {
             display: inline-block;
             text-decoration: none;
@@ -36,45 +47,53 @@
             border-radius: 5px;
             transition: background-color 0.3s, transform 0.2s;
         }
+
         a:hover {
             background-color: #0056b3; /* Darker blue on hover */
             transform: scale(1.05); /* Slightly enlarges button on hover */
         }
+
+        .top-bar {
+            margin-bottom: 20px;
+        }
+
+        .hidden-form {
+            margin-bottom: 40px; /* Added space between form and thank-you message */
+        }
     </style>
 </head>
 <body>
-	<div class="mx-auto bg-white dark:bg-gray-900">
-        <main class="dark-mode" role="main">
-            <!-- Top Bar with Subscribe Button -->
-            <div class="bg-gray-100 dark:bg-gray-800 text-center py-2 top-bar" style="z-index: 10; position: relative;">
-                <button
-                    class="bg-primary text-white font-bold py-2 px-4 rounded hover:bg-secondary"
-                    id="subscribe-button"
-                >
-                    💌 Subscribe 💌
-                </button>
-            </div>
+    <div class="container">
+        <!-- Top Bar with Subscribe Button -->
+        <div class="top-bar">
+            <button
+                class="bg-primary text-white font-bold py-2 px-4 rounded hover:bg-secondary"
+                id="subscribe-button"
+            >
+                💌 Subscribe 💌
+            </button>
+        </div>
 
+        <!-- Hidden Subscription Form -->
+        <div id="subscriber-form" class="hidden-form">
+            <div class="AW-Form-434100161"></div>
+            <script type="text/javascript">
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//forms.aweber.com/form/61/434100161.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, "script", "aweber-wjs-hlbo77m9t"));
+            </script>
+        </div>
 
-            <!-- Hidden Subscription Form -->
-            <div id="subscriber-form" class="hidden-form">
-                <div class="AW-Form-434100161"></div>
-                <script type="text/javascript">
-                    (function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = "//forms.aweber.com/form/61/434100161.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, "script", "aweber-wjs-hlbo77m9t"));
-                </script>
-            </div>
-	</main>
-    </div>
-    <div>
-        <h1>Thank You!</h1>
-        <p>Your subscription has been successfully confirmed. We're thrilled to have you with us!</p>
-        <a href="index.html">Back to Home</a>
+        <!-- Thank You Message -->
+        <div>
+            <h1>Thank You!</h1>
+            <p>Your subscription has been successfully confirmed. We're thrilled to have you with us!</p>
+            <a href="index.html">Back to Home</a>
+        </div>
     </div>
 </body>
 </html>
