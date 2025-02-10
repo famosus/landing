@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
+    <title>Subscribe to Our Newsletter</title>
     <style>
         body {
             margin: 0;
@@ -11,79 +11,64 @@
             background-color: #001f3f; /* Dark blue background */
             color: #ffffff; /* White text */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
         }
-        
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
             width: 100%;
         }
-
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 20px;
-            text-shadow: 0 0 10px #ffff00; /* Yellow border effect */
+            text-shadow: 0 0 10px #ffff00;
         }
-
-        p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+        .hidden-form {
+            display: block; /* Ensure it's visible */
+            width: 100%;
         }
-
-        a {
+        /* Fix for Email Privacy link */
+        .AW-Form-434100161 a {
+            font-size: 0.8rem;
+            background: none !important; /* No background */
+            color: #ccc !important; /* Light gray text */
+            border: none !important;
+            text-decoration: underline;
+            cursor: pointer;
+            display: inline-block;
+            padding: 0;
+        }
+        .AW-Form-434100161 a:hover {
+            color: #fff !important;
+        }
+        /* Back to Home Button */
+        .back-home {
             display: inline-block;
             text-decoration: none;
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: bold;
             color: #ffffff;
-            background-color: #007bff; /* Bright blue button */
-            padding: 15px 30px;
+            background-color: #007bff;
+            padding: 10px 20px;
             border-radius: 5px;
+            margin-top: 20px;
             transition: background-color 0.3s, transform 0.2s;
         }
-
-        a:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-            transform: scale(1.05); /* Slightly enlarges button on hover */
+        .back-home:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
-
-        .top-bar {
-            margin-bottom: 20px;
-        }
-
-        .hidden-form {
-            margin-bottom: 40px; /* Added space between form and thank-you message */
-        }
-
-        .AW-Form-434100161 .email-privacy {
-    font-size: 0.8rem;
-    background: none;
-    color: #ccc;
-    border: none;
-    text-decoration: underline;
-    cursor: pointer;
-}
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Top Bar with Subscribe Button -->
-        <div class="top-bar">
-            <button
-                class="bg-primary text-white font-bold py-2 px-4 rounded hover:bg-secondary"
-                id="subscribe-button"
-            >
-                💌 Subscribe 💌
-            </button>
-        </div>
-
-        <!-- Hidden Subscription Form -->
+    <div class="form-container">
+        <h1>Subscribe to Our Newsletter</h1>
         <div id="subscriber-form" class="hidden-form">
             <div class="AW-Form-434100161"></div>
             <script type="text/javascript">
@@ -96,13 +81,7 @@
                 }(document, "script", "aweber-wjs-hlbo77m9t"));
             </script>
         </div>
-
-        <!-- Thank You Message -->
-        <div>
-            <h1>Thank You!</h1>
-            <p>Your subscription has been successfully confirmed. We're thrilled to have you with us!</p>
-            <a href="index.html">Back to Home</a>
-        </div>
+        <a href="index.html" class="back-home">Back to Home</a>
     </div>
 </body>
 </html>
